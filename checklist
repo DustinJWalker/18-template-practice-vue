@@ -36,21 +36,21 @@
    * [ x] `submitForm`
 * [ x] **Checkpoint:** Update the application template to loop through `formInputs`
  - [ x] If the current input in `formInputs` is type "select"
-   * [ ] Make a `select` with the name and id set to the `id` field of the current form input data
+   * [ x] Make a `select` with the name and id set to the `id` field of the current form input data
      - [x ] Use `v-model` to set the value to `formValues[input.id]`
-   * [ ] Make an `option` element within the select that loops through all of the `options`
-     - [ ] For every option, use the `label` for the inner text and `value` to set the `value` attribute
- - [ ] else
-   - [ ] If the current input in `formInputs` is type "textarea"
-     * [ ] Make a `textarea` with the name and id set to the `id` field of the current form input data
-       - [ ]  Use `v-model` to set the value to `formValues[input.id]`
-   - [ ] else
-     - [ ] Make an `input`name and id set to the `id` field of the current form input data
-       - [ ] Use `v-model` to set the value to `formValues[input.id]`
-       - [ ] Bind the `type` attribute to `input.type`
-       * [ ] **Checkpoint:** Submit the Form with Vue
-     - [ ] Add a submit handler to the form and prevent defaut while calling `submitForm`
-     - [ ] Implement `submitForm`
-       - [ ] Use `console.log` to print the current formValues on the component
-       - [ ] Use `fetch` to post your formvalues to `http://tiny-tn.herokuapp.com/collections/form-<your-name>`
+   * [ x] Make an `option` element within the select that loops through all of the `options`
+     - [x ] For every option, use the `label` for the inner text and `value` to set the `value` attribute
+ - [x ] else
+   - [ x] If the current input in `formInputs` is type "textarea"
+     * [x ] Make a `textarea` with the name and id set to the `id` field of the current form input data
+       - [ x]  Use `v-model` to set the value to `formValues[input.id]`
+   - [x ] else
+     - [x ] Make an `input`name and id set to the `id` field of the current form input data
+       - [ x] Use `v-model` to set the value to `formValues[input.id]`
+       - [ x] Bind the `type` attribute to `input.type`
+       * [x ] **Checkpoint:** Submit the Form with Vue
+     - [ x] Add a submit handler to the form and prevent defaut while calling `submitForm`
+     - [ x] Implement `submitForm`
+       - [x ] Use `console.log` to print the current formValues on the component
+       - [ x] Use `fetch` to post your formvalues to `http://tiny-tn.herokuapp.com/collections/form-<your-name>`
        - [ ] Confirm that formValues are posted to the server
