@@ -34,10 +34,10 @@
    - [x ] Fetch to `apiUrl`, parse the json, then set `formInputs` based on the results from the API
  - [ x] Add blank functions to `methods`
    * [ x] `submitForm`
-* [ ] **Checkpoint:** Update the application template to loop through `formInputs`
- - [ ] If the current input in `formInputs` is type "select"
+* [ x] **Checkpoint:** Update the application template to loop through `formInputs`
+ - [ x] If the current input in `formInputs` is type "select"
    * [ ] Make a `select` with the name and id set to the `id` field of the current form input data
-     - [ ] Use `v-model` to set the value to `formValues[input.id]`
+     - [x ] Use `v-model` to set the value to `formValues[input.id]`
    * [ ] Make an `option` element within the select that loops through all of the `options`
      - [ ] For every option, use the `label` for the inner text and `value` to set the `value` attribute
  - [ ] else
