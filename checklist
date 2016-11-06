@@ -24,16 +24,16 @@
     * [ x] Panel Block with form
       - [ x] inputs
     * [ x] Panel Block with button
-    [ ] **Checkpoint:** Setup Application Data and Startup
- - [ ] Add a variable called `apiUrl` and set it to: `http://json-data.herokuapp.com/forms`
- - [ ] Setup `data` properties:
-   * [ ] `formInputs` set to a blank array
-   * [ ] `formValues` set to a blank array
-   * [ ] `apiUrl` set to `apiUrl`
- - [ ] Add a `getData` function within `methods`
-   - [ ] Fetch to `apiUrl`, parse the json, then set `formInputs` based on the results from the API
- - [ ] Add blank functions to `methods`
-   * [ ] `submitForm`
+    [x ] **Checkpoint:** Setup Application Data and Startup
+ - [ x] Add a variable called `apiUrl` and set it to: `http://json-data.herokuapp.com/forms`
+ - [ x] Setup `data` properties:
+   * [ x] `formInputs` set to a blank array
+   * [ x] `formValues` set to a blank array
+   * [ x] `apiUrl` set to `apiUrl`
+ - [ x] Add a `getData` function within `methods`
+   - [x ] Fetch to `apiUrl`, parse the json, then set `formInputs` based on the results from the API
+ - [ x] Add blank functions to `methods`
+   * [ x] `submitForm`
 * [ ] **Checkpoint:** Update the application template to loop through `formInputs`
  - [ ] If the current input in `formInputs` is type "select"
    * [ ] Make a `select` with the name and id set to the `id` field of the current form input data
