@@ -7,23 +7,23 @@
   - [x ] Uncomment the `vueify` lines from the `Brocfile.js` to enable Vueification (is that a thing?)
   - [ x] Uncomment the `app.use` code in `server/index.js` to support client-side routing for the dev server
   - [x ] Uncomment the plugins in `.eslintrc.js` to support linting for `.vue` files
-* [ ] **Checkpoint:** Add styling with Bulma
-  - [ ] Use `yarn` to install `bulma`
-  - [ ] In `app.scss`
-    * [ ] Uncomment the `fa-font-path`
-    * [ ] Import `bulma/bulma` before the font-awesome import
+* [x ] **Checkpoint:** Add styling with Bulma
+  - [ x] Use `yarn` to install `bulma`
+  - [ x] In `app.scss`
+    * [x ] Uncomment the `fa-font-path`
+    * [ x] Import `bulma/bulma` before the font-awesome import
 * [ ] **Checkpoint:** Setup Vue Router
-  - [ ] Use the `vrouter` snippet to setup the Vue router in `index.js`
-  - [ ] Create a `routes` directory in your `app` directory
-  - [ ] Create a `application.vue` component in the `routes` directory and use the `template` snippet to fill it with the starting skeleton for a component
-  - [ ] Comment out the route for Index and the import statement in `index.js`- you won't need an index route for this one
-* [ ] **Checkpoint:** Static HTML Application Component
-  - [ ] Using the Bulma documentation as a guide, recreate the HTML for the form
-    * [ ] Panel
-    * [ ] Panel Heading
-    * [ ] Panel Block with form
-      - [ ] inputs
-    * [ ] Panel Block with button
+  - [x ] Use the `vrouter` snippet to setup the Vue router in `index.js`
+  - [x ] Create a `routes` directory in your `app` directory
+  - [ x] Create a `application.vue` component in the `routes` directory and use the `template` snippet to fill it with the starting skeleton for a component
+  - [ x] Comment out the route for Index and the import statement in `index.js`- you won't need an index route for this one
+* [ x] **Checkpoint:** Static HTML Application Component
+  - [x ] Using the Bulma documentation as a guide, recreate the HTML for the form
+    * [x ] Panel
+    * [ x] Panel Heading
+    * [ x] Panel Block with form
+      - [ x] inputs
+    * [ x] Panel Block with button
     [ ] **Checkpoint:** Setup Application Data and Startup
  - [ ] Add a variable called `apiUrl` and set it to: `http://json-data.herokuapp.com/forms`
  - [ ] Setup `data` properties:
