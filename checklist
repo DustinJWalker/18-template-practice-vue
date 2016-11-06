@@ -1,12 +1,12 @@
-* [ ] Create a new project named `18-template-practice-vue` using the `yo qunit-broccoli` command
-* [ ] Run `hub create` to create a new repository on Github
-* [ ] Push `master` branch
-* [ ] Create `develop` branch
-* [ ] **Checkpoint:** Setup Build Tools and Dev Tools
-  - [ ] Use the setup npm script to install Vue, Vueify, and Vue Router
-  - [ ] Uncomment the `vueify` lines from the `Brocfile.js` to enable Vueification (is that a thing?)
-  - [ ] Uncomment the `app.use` code in `server/index.js` to support client-side routing for the dev server
-  - [ ] Uncomment the plugins in `.eslintrc.js` to support linting for `.vue` files
+* [ x] Create a new project named `18-template-practice-vue` using the `yo qunit-broccoli` command
+* [x ] Run `hub create` to create a new repository on Github
+* [x ] Push `master` branch
+* [x ] Create `develop` branch
+* [ x] **Checkpoint:** Setup Build Tools and Dev Tools
+  - [ x] Use the setup npm script to install Vue, Vueify, and Vue Router
+  - [x ] Uncomment the `vueify` lines from the `Brocfile.js` to enable Vueification (is that a thing?)
+  - [ x] Uncomment the `app.use` code in `server/index.js` to support client-side routing for the dev server
+  - [x ] Uncomment the plugins in `.eslintrc.js` to support linting for `.vue` files
 * [ ] **Checkpoint:** Add styling with Bulma
   - [ ] Use `yarn` to install `bulma`
   - [ ] In `app.scss`
