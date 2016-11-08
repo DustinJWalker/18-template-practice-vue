@@ -2,7 +2,7 @@
   <div class="">
     <section class="section">
       <div class="container">
-        <form @submit.prevent="submitForm" class="panel">
+        <form @submit.prevent="submitForm(formData)" class="panel">
 
         <div class="panel">
           <p class="panel-heading title">
@@ -13,28 +13,28 @@
             <p class="control has-icon has-icon-left" v-for="input in formInputs">
               <template v-if="input.type === 'select'">
                 <span class="select is-fullwidth">
-                  <select placeholder="item.label">
-                    <option value="">{O label}</option>
-                    <option value="">{O label}</option>
+                  <select v-model="formData[input.id]">
+                    <option :value="undefined">{{ input.label }}</option>
+                    <option v-for="option in input.options">{{ option.label }}</option>
                   </select>
                 </span>
               </template>
               <template v-else>
                 <template v-if="input.type === 'textarea' ">
-                  <i class="fa fa-comments-o" aria-hidden="true"></i>
-                  <textarea class="textarea input"></textarea>
+                  <i class="fa" :class="input.icon" aria-hidden="true"></i>
+                  <textarea class="textarea input" :placeholder="input.label" v-model="formData[input.id]"></textarea>
                 </template>
 
                 <template v-else>
-                  <i class="fa fa-user-o" aria-hidden="true"></i>
-                  <input class="input" type="text" placeholder="item.label">
+                  <i class="fa" :class="input.icon" aria-hidden="true"></i>
+                  <input class="input" type="text" :placeholder="input.label" v-model="formData[input.id]">
                 </template>
               </template>
             </p>
           </div>
 
           <p class="panel-block">
-            <button @click="submitForm(formValues)" class="button is-fullwidth is primary">Submit</button>
+            <button class="button is-fullwidth is-primary">Submit</button>
           </p>
 
         </div>
@@ -50,9 +50,9 @@ const apiUrl = 'http://json-data.herokuapp.com/forms'
 export default {
   data() {
     return {
-      apiUrl,
+      apiUrl: 'apiUrl',
       formInputs: [],
-      formValues: {},
+      formData: {},
     };
   },
 
@@ -68,17 +68,16 @@ export default {
           this.formInputs = formInputs;
         });
     },
-    submitForm(formValues) {
+    submitForm(inputs) {
       fetch('http://tiny-tn.herokuapp.com/collections/form-dustin', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(this.formValues)
+          body: JSON.stringify(inputs)
         })
         .then(() => {
-          this.formValues = formValues;
-          console.log(formValues);
+          console.log(inputs);
         });
     },
   },
