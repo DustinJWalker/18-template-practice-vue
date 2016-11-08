@@ -1,0 +1,56 @@
+* [ x] Create a new project named `18-template-practice-vue` using the `yo qunit-broccoli` command
+* [x ] Run `hub create` to create a new repository on Github
+* [x ] Push `master` branch
+* [x ] Create `develop` branch
+* [ x] **Checkpoint:** Setup Build Tools and Dev Tools
+  - [ x] Use the setup npm script to install Vue, Vueify, and Vue Router
+  - [x ] Uncomment the `vueify` lines from the `Brocfile.js` to enable Vueification (is that a thing?)
+  - [ x] Uncomment the `app.use` code in `server/index.js` to support client-side routing for the dev server
+  - [x ] Uncomment the plugins in `.eslintrc.js` to support linting for `.vue` files
+* [x ] **Checkpoint:** Add styling with Bulma
+  - [ x] Use `yarn` to install `bulma`
+  - [ x] In `app.scss`
+    * [x ] Uncomment the `fa-font-path`
+    * [ x] Import `bulma/bulma` before the font-awesome import
+* [ ] **Checkpoint:** Setup Vue Router
+  - [x ] Use the `vrouter` snippet to setup the Vue router in `index.js`
+  - [x ] Create a `routes` directory in your `app` directory
+  - [ x] Create a `application.vue` component in the `routes` directory and use the `template` snippet to fill it with the starting skeleton for a component
+  - [ x] Comment out the route for Index and the import statement in `index.js`- you won't need an index route for this one
+* [ x] **Checkpoint:** Static HTML Application Component
+  - [x ] Using the Bulma documentation as a guide, recreate the HTML for the form
+    * [x ] Panel
+    * [ x] Panel Heading
+    * [ x] Panel Block with form
+      - [ x] inputs
+    * [ x] Panel Block with button
+    [x ] **Checkpoint:** Setup Application Data and Startup
+ - [ x] Add a variable called `apiUrl` and set it to: `http://json-data.herokuapp.com/forms`
+ - [ x] Setup `data` properties:
+   * [ x] `formInputs` set to a blank array
+   * [ x] `formValues` set to a blank array
+   * [ x] `apiUrl` set to `apiUrl`
+ - [ x] Add a `getData` function within `methods`
+   - [x ] Fetch to `apiUrl`, parse the json, then set `formInputs` based on the results from the API
+ - [ x] Add blank functions to `methods`
+   * [ x] `submitForm`
+* [ x] **Checkpoint:** Update the application template to loop through `formInputs`
+ - [ x] If the current input in `formInputs` is type "select"
+   * [ x] Make a `select` with the name and id set to the `id` field of the current form input data
+     - [x ] Use `v-model` to set the value to `formValues[input.id]`
+   * [ x] Make an `option` element within the select that loops through all of the `options`
+     - [x ] For every option, use the `label` for the inner text and `value` to set the `value` attribute
+ - [x ] else
+   - [ x] If the current input in `formInputs` is type "textarea"
+     * [x ] Make a `textarea` with the name and id set to the `id` field of the current form input data
+       - [ x]  Use `v-model` to set the value to `formValues[input.id]`
+   - [x ] else
+     - [x ] Make an `input`name and id set to the `id` field of the current form input data
+       - [ x] Use `v-model` to set the value to `formValues[input.id]`
+       - [ x] Bind the `type` attribute to `input.type`
+       * [x ] **Checkpoint:** Submit the Form with Vue
+     - [ x] Add a submit handler to the form and prevent defaut while calling `submitForm`
+     - [ x] Implement `submitForm`
+       - [x ] Use `console.log` to print the current formValues on the component
+       - [ x] Use `fetch` to post your formvalues to `http://tiny-tn.herokuapp.com/collections/form-<your-name>`
+       - [ ] Confirm that formValues are posted to the server
