@@ -26,6 +26,7 @@
                 </template>
 
                 <template v-else>
+
                   <i class="fa" :class="input.icon" aria-hidden="true"></i>
                   <input class="input" type="text" :placeholder="input.label" v-model="formData[input.id]">
                 </template>
