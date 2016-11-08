@@ -10,22 +10,26 @@
           </p>
 
           <div class="panel-block">
-            <p class="control has-icon has-icon-left">
-              <i class="fa fa-user-o" aria-hidden="true"></i>
-              <input class="input" type="text" placeholder="item.label">
-            </p>
-            <p class="control has-icon has-icon-left">
-              <span class="select is-fullwidth">
-                <select placeholder="item.label">
-                  <option value="">{O label}</option>
-                  <option value="">{O label}</option>
-                </select>
-              </span>
-            </p>
+            <p class="control has-icon has-icon-left" v-for="input in formInputs">
+              <template v-if="input.type === 'select'">
+                <span class="select is-fullwidth">
+                  <select placeholder="item.label">
+                    <option value="">{O label}</option>
+                    <option value="">{O label}</option>
+                  </select>
+                </span>
+              </template>
+              <template v-else>
+                <template v-if="input.type === 'textarea' ">
+                  <i class="fa fa-comments-o" aria-hidden="true"></i>
+                  <textarea class="textarea input"></textarea>
+                </template>
 
-            <p class="control has-icon has-icon-left">
-              <i class="fa fa-comments-o" aria-hidden="true"></i>
-              <textarea class="textarea input"></textarea>
+                <template v-else>
+                  <i class="fa fa-user-o" aria-hidden="true"></i>
+                  <input class="input" type="text" placeholder="item.label">
+                </template>
+              </template>
             </p>
           </div>
 
